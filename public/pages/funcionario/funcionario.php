@@ -30,7 +30,7 @@
               <div class="col-sm-4">
                 <div class="card">
                   <div class="card-body">Cartão Funcionario</div>
-                  <?php echo $funcionario['email']; ?>
+                  <?php echo $funcionario['nome']; ?>
                 </div>
               </div>                           
           <?php } ?>
