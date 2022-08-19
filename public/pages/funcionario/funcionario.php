@@ -14,6 +14,7 @@
         <div class="row mb-2">
           <div class="col-sm-6">
             <h1 class="m-0">Funcionarios</h1>
+            <button type="button" class="btn btn-success">Adicionar Funcionario</button>
           </div>
         </div>
       </div>
