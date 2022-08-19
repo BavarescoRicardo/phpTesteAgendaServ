@@ -5,10 +5,19 @@
     $funcionarios = $objFuncionario->getFuncionarios();
 
     if(isset($_POST["salvar"])) {
-      $nome    = $_POST['nome'];
-      $email   = $_POST['email'];
-      $telefone        = $_POST['senha'];
-      $senha        = $_POST['telefone'];      
+      
+      // Tratamento de imagem inicio
+          // $ext = strtolower(substr($_FILES['foto']['name'],-4)); //Pegando extensão do arquivo
+          // $new_name = date("Y.m.d-H.i.s") . $ext; //Definindo um novo nome para o arquivo
+          // $dir = '/'; //Diretório para uploads 
+          // move_uploaded_file($_FILES['foto']['tmp_name'], $dir.$new_name); //Fazer upload do arquivo
+          // echo("Imagen enviada com sucesso!");
+      // Tratamento de imagem fim
+
+      $nome      = $_POST['nome'];
+      $email     = $_POST['email'];
+      $telefone  = $_POST['telefone'];
+      $senha     = $_POST['senha'];      
       $objFuncionario->insertFuncionario($nome, $email, $senha,  $telefone);  
       
      $_SESSION['message'] = "SALVO COM SUCESSO";

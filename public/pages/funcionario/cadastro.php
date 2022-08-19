@@ -18,6 +18,9 @@
                     <input type="text" class="form-control" id="nome" name="nome">                
                 </div>
 
+                <label for="foto">Enviar imagem:</label>
+                <input type="file" id="foto" name="foto" accept="image/*">    
+
                 <div class="form-group">
                     <label for="email">Email:</label>
                     <input type="text" class="form-control" id="email" name="email">                
