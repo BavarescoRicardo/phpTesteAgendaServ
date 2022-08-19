@@ -10,7 +10,7 @@
 <div class="wrapper">
  
 <div id="header"> <?php include("../template/menu.php"); ?> </div>
-
+  <div id="header"> <?php include("cadastro.php"); ?> </div>    
   <div class="content-wrapper ">
    
     <div class="content-header">
@@ -18,19 +18,20 @@
         <div class="row mb-2">
           <div class="col-sm-6">
             <h1 class="m-0">Funcionarios</h1>
-            <button type="button" class="btn btn-success">Adicionar Profissional</button>
+            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">Adicionar Profissional</button>
           </div>
         </div>
 
         <div class="row mb-2">
         <?php
           foreach($funcionarios as $funcionario ){ ?>
-            <!-- <option value = "<?php echo $funcionario['id_servico']; ?>"><?php echo $funcionario['nome_servico']; ?></option> -->
-            
               <div class="col-sm-4">
                 <div class="card">
                   <div class="card-body">Cartão Funcionario</div>
                   <?php echo $funcionario['nome']; ?>
+                  <P>Comissão Pendente</P>
+                  <?php echo $funcionario['comissaopend']; ?>
+                  <button type="button" style="color: black; width: 100px" class="btn btn-success">Pagar</button>
                 </div>
               </div>                           
           <?php } ?>
