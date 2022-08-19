@@ -4,6 +4,21 @@
     $objFuncionario = new funcionarioview();
     $funcionarios = $objFuncionario->getFuncionarios();
 
+    if(isset($_POST["salvar"])) {
+      $nome    = $_POST['nome'];
+      $email   = $_POST['email'];
+      $telefone        = $_POST['senha'];
+      $senha        = $_POST['telefone'];      
+      $objFuncionario->insertFuncionario($nome, $email, $senha,  $telefone);  
+      
+     $_SESSION['message'] = "SALVO COM SUCESSO";
+     $_SESSION['msg_type'] = "success";
+     
+     if (headers_sent()) die("O redirecionamento falhou. Por favor, clique neste link para ser redirecionado: <a href='funcionario.php'>Promoção</a>");
+     else exit(header("Location: funcionario.php"));
+      
+  }
+
 ?>
 <div id="header"> <?php include("../template/header.php"); ?> </div>
 

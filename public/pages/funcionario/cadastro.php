@@ -12,15 +12,10 @@
 
         <div id="container-criar" class="col-md-6">
             <h4>Adicionar Profissional</h4>
-            <form action="/cliente" method="POST">
+            <form role="form" action="funcionario.php" method="POST" >
                 <div class="form-group">
                     <label for="nome">Nome:</label>
                     <input type="text" class="form-control" id="nome" name="nome">                
-                </div>
-
-                <div class="form-group">
-                    <label for="endereco">Endereço:</label>
-                    <input type="text" class="form-control" id="endereco" name="endereco">                
                 </div>
 
                 <div class="form-group">
@@ -28,14 +23,23 @@
                     <input type="text" class="form-control" id="email" name="email">                
                 </div>
 
-                <input type="submit" class="btn btn-primary" value="Novo Funcionario">
+                <div class="form-group">
+                    <label for="senha">Senha:</label>
+                    <input type="text" class="form-control" id="senha" name="senha" placeholder="Nova senha">                
+                </div>
+
+                <div class="form-group">
+                    <label for="telefone">telefone:</label>
+                    <input type="text" class="form-control" id="telefone" name="telefone">                
+                </div>
+
+                <input type="submit" name="salvar" class="btn btn-primary" value="Novo Funcionario">
             </form>
         </div>
 
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Sair</button>
-        <button type="button" class="btn btn-primary">Cadastrar</button>
       </div>
     </div>
   </div>
