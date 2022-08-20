@@ -55,7 +55,7 @@
                           <?php echo $funcionario['nome']; ?>
                           <hr>
                           <P>Comissão Pendente</P>
-                          <?php echo $funcionario['comissaopend']; ?> <br>                        
+                          <?php echo '<p>R$ '.$funcionario['comissaopend'].'</p>' ?> <br>                        
                           <button type="button" style="color: black; width: 100px" class="btn btn-success">Pagar</button>
                           </div>
                         </div>
