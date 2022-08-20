@@ -20,7 +20,7 @@ class funcionario extends Database {
 
     protected function insert($nome, $email, $senha, $telefone, $caminho) {
        
-        $sql = "INSERT INTO funcionario (nome, email, senha, telefone, observacao) VALUES (?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO funcionario (nome, email, senha, telefone, caminho_imagem) VALUES (?, ?, ?, ?, ?)";
 
         try {
             $stm = $this->connect()->prepare($sql);
