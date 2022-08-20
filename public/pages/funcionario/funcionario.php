@@ -19,7 +19,7 @@
       $email     = $_POST['email'];
       $telefone  = $_POST['telefone'];
       $senha     = $_POST['senha'];      
-      $objFuncionario->insertFuncionario($nome, $email, $senha,  $telefone);  
+      $objFuncionario->insertFuncionario($nome, $email, $senha,  $telefone, $caminho);  
       
      $_SESSION['message'] = "SALVO COM SUCESSO";
      $_SESSION['msg_type'] = "success";

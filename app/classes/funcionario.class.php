@@ -18,14 +18,14 @@ class funcionario extends Database {
         }
     }
 
-    protected function insert($nome, $email, $senha, $telefone) {
+    protected function insert($nome, $email, $senha, $telefone, $caminho) {
        
-        $sql = "INSERT INTO funcionario (nome, email, senha, telefone) VALUES (?, ?, ?, ?)";
+        $sql = "INSERT INTO funcionario (nome, email, senha, telefone, observacao) VALUES (?, ?, ?, ?, ?)";
 
         try {
             $stm = $this->connect()->prepare($sql);
             
-            $stm->execute([$nome, $email, $senha, $telefone]);
+            $stm->execute([$nome, $email, $senha, $telefone, $caminho]);
             
         } catch (PDOException $e) {
             echo "Error: ".$e->getMessage();
