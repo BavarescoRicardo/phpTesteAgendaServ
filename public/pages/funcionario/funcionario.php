@@ -36,63 +36,46 @@
 ?>
 <div id="header"> <?php include("../template/header.php"); ?> </div>
 
-<div class="wrapper">
- 
-<div id="header"> <?php include("../template/menu.php"); ?> </div>
-  <div id="header"> <?php include("cadastro.php"); ?> </div>    
-  <div class="content-wrapper ">
-   
-    <div class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1 class="m-0">Funcionarios</h1>
-            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">Adicionar Profissional</button>
+<div class="wrapper"> 
+  <div id="header"> <?php include("../template/menu.php"); ?> </div>
+    <div id="header"> <?php include("cadastro.php"); ?> </div>    
+    <div class="content-wrapper ">    
+      <div class="content-header">
+          <div class="container-fluid">
+            <div class="row mb-2">
+              <div class="col-sm-6">
+                <h1 class="m-0">Funcionarios</h1>
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">Adicionar Profissional</button>
+              </div>
+            </div>
+
+            <div class="row mb-2">
+            <?php
+              foreach($funcionarios as $funcionario ){ ?>
+                  <div class="col-sm-4">
+                    <div class="card">
+                      <div class="card-body">Funcionario</div>                  
+                      <?php echo $funcionario['nome']; ?>
+                      <?php echo '<img src="'.$funcionario['caminho_imagem'].'" style="height: 100px; width: 100px;"/><br />';?>
+                      <P>Comissão Pendente</P>
+                      <?php echo $funcionario['comissaopend']; ?>
+                      <button type="button" style="color: black; width: 100px" class="btn btn-success">Pagar</button>
+                    </div>
+                  </div>                           
+              <?php } ?>
+              </div>
+            </div>
+
+        </div>        
+        <div class="content" >
+          <div class="container-fluid">
+        <div class="row" style="margin-bottom:20px">
+          <div class="col-lg-12">
           </div>
         </div>
-
-        <div class="row mb-2">
-        <?php
-          foreach($funcionarios as $funcionario ){ ?>
-              <div class="col-sm-4">
-                <div class="card">
-                  <div class="card-body">Cartão Funcionario</div>
-                  <?php echo $funcionario['nome']; ?>
-                  <P>Comissão Pendente</P>
-                  <?php echo $funcionario['comissaopend']; ?>
-                  <button type="button" style="color: black; width: 100px" class="btn btn-success">Pagar</button>
-                </div>
-              </div>                           
-          <?php } ?>
-          </div>
-
-          <?php
-            foreach($images as $image) {
-              echo '<br>';
-              echo  '<br>';
-              echo '<img src="'.$image.'" style="height: 100px; width: 100px;"/><br />';
-            }
-          ?>
       </div>
     </div>
-    
-    <div class="content" >
-      <div class="container-fluid">
-		<div class="row" style="margin-bottom:20px">
-			<div class="col-lg-12">
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-lg-12">
-				
-			</div>
-		</div>
-
-      </div>
-    </div>
-
-  </div>
+</div>
   
 
 <div id="header"> <?php include("../template/footer.php"); ?> </div>
