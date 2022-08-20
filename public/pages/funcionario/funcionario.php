@@ -52,14 +52,18 @@
             <div class="row mb-2">
             <?php
               foreach($funcionarios as $funcionario ){ ?>
-                  <div class="col-sm-4">
+                  <div class="col-sm-3">
                     <div class="card">
-                      <div class="card-body">Funcionario</div>                  
-                      <?php echo $funcionario['nome']; ?>
-                      <?php echo '<img src="'.$funcionario['caminho_imagem'].'" style="height: 100px; width: 100px;"/><br />';?>
-                      <P>Comissão Pendente</P>
-                      <?php echo $funcionario['comissaopend']; ?>
-                      <button type="button" style="color: black; width: 100px" class="btn btn-success">Pagar</button>
+                      <div class="card-body">
+                        <div class="text-center">
+                          <?php echo '<img src="'.$funcionario['caminho_imagem'].'" class="rounded" style="height: 100px; width: 100px;"/><br />';?>
+                          <?php echo $funcionario['nome']; ?>
+                          <hr>
+                          <P>Comissão Pendente</P>
+                          <?php echo $funcionario['comissaopend']; ?> <br>                        
+                          <button type="button" style="color: black; width: 100px" class="btn btn-success">Pagar</button>
+                          </div>
+                      </div>
                     </div>
                   </div>                           
               <?php } ?>
