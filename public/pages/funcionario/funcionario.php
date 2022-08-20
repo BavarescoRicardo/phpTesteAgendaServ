@@ -9,7 +9,10 @@
 
       // Tratamento de imagem inicio
         $image=$_FILES['myfile'];
-        move_uploaded_file($image['tmp_name'],"/xampp/htdocs/phpTeste/phpTesteAgendaServ/imagens/".$image['name']);
+        move_uploaded_file($image['tmp_name'],dirname(__DIR__) ."/imagens/".$image['name']);
+
+        $caminho = dirname(__DIR__) ."/imagens/".$image['name'];
+        echo($caminho);
       // Tratamento de imagem fim
 
       $nome      = $_POST['nome'];
