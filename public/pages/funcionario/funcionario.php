@@ -70,7 +70,6 @@
             foreach($images as $image) {
               echo '<br>';
               echo  '<br>';
-              echo  '<p>Imagem abaixo  '.$image.'</p>';
               echo '<img src="'.$image.'" style="height: 100px; width: 100px;"/><br />';
             }
           ?>
