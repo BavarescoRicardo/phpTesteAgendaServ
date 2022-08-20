@@ -45,7 +45,7 @@
             <div class="row mb-2">
               <div class="col-sm-6">
                 <h1 class="m-0">Funcionarios</h1>
-                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">Adicionar Profissional</button>
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#cadastroModal">Adicionar Profissional</button>
               </div>
             </div>
 
@@ -53,7 +53,7 @@
             <?php
               foreach($funcionarios as $funcionario ){ ?>
                   <div class="col-sm-3">
-                    <div class="card">
+                    <div class="card border-dark" style="border: 1px solid;">
                       <div class="card-body">
                         <div class="text-center">
                           <?php echo '<img src="'.$funcionario['caminho_imagem'].'" class="rounded" style="height: 100px; width: 100px;"/><br />';?>
@@ -63,7 +63,7 @@
                           <?php echo $funcionario['comissaopend']; ?> <br>                        
                           <button type="button" style="color: black; width: 100px" class="btn btn-success">Pagar</button>
                           </div>
-                      </div>
+                        </div>
                     </div>
                   </div>                           
               <?php } ?>
