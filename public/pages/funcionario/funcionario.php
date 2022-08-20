@@ -3,15 +3,13 @@
 
     $objFuncionario = new funcionarioview();
     $funcionarios = $objFuncionario->getFuncionarios();
+    
 
     if(isset($_POST["salvar"])) {
-      
+
       // Tratamento de imagem inicio
-          // $ext = strtolower(substr($_FILES['foto']['name'],-4)); //Pegando extensão do arquivo
-          // $new_name = date("Y.m.d-H.i.s") . $ext; //Definindo um novo nome para o arquivo
-          // $dir = '/'; //Diretório para uploads 
-          // move_uploaded_file($_FILES['foto']['tmp_name'], $dir.$new_name); //Fazer upload do arquivo
-          // echo("Imagen enviada com sucesso!");
+        $image=$_FILES['myfile'];
+        move_uploaded_file($image['tmp_name'],"/xampp/htdocs/phpTeste/phpTesteAgendaServ/imagens/".$image['name']);
       // Tratamento de imagem fim
 
       $nome      = $_POST['nome'];

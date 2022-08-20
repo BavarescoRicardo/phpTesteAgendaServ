@@ -12,14 +12,15 @@
 
         <div id="container-criar" class="col-md-6">
             <h4>Adicionar Profissional</h4>
-            <form role="form" action="funcionario.php" method="POST" >
+            <form role="form" action="funcionario.php" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="nome">Nome:</label>
                     <input type="text" class="form-control" id="nome" name="nome">                
                 </div>
 
-                <label for="foto">Enviar imagem:</label>
-                <input type="file" id="foto" name="foto" accept="image/*">    
+                <label>UploadImage</label>
+                <input type="file" id="myfile" name='myfile'>
+                <br/>
 
                 <div class="form-group">
                     <label for="email">Email:</label>
