@@ -3,11 +3,6 @@
 
     $objFuncionario = new funcionarioview();
     $funcionarios = $objFuncionario->getFuncionarios();
-
-    // Variavél para carregar as imagens salvas
-    // $files = glob(dirname(__DIR__) ."/imagens/*.*");
-    
-    // $dirname = "media/images/iconized/";
     $images = glob("../imagens/*");
 
     if(isset($_POST["salvar"])) {
