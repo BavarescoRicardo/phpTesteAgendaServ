@@ -3,15 +3,20 @@
 
     $objFuncionario = new funcionarioview();
     $funcionarios = $objFuncionario->getFuncionarios();
+
+    // Variavél para carregar as imagens salvas
+    // $files = glob(dirname(__DIR__) ."/imagens/*.*");
     
+    // $dirname = "media/images/iconized/";
+    $images = glob("../imagens/*");
 
     if(isset($_POST["salvar"])) {
 
       // Tratamento de imagem inicio
         $image=$_FILES['myfile'];
-        move_uploaded_file($image['tmp_name'],dirname(__DIR__) ."/imagens/".$image['name']);
+        move_uploaded_file($image['tmp_name'],"../imagens/".$image['name']);
 
-        $caminho = dirname(__DIR__) ."/imagens/".$image['name'];
+        $caminho = "../imagens/".$image['name'];
         echo($caminho);
       // Tratamento de imagem fim
 
@@ -25,9 +30,8 @@
      $_SESSION['msg_type'] = "success";
      
      if (headers_sent()) die("O redirecionamento falhou. Por favor, clique neste link para ser redirecionado: <a href='funcionario.php'>Promoção</a>");
-     else exit(header("Location: funcionario.php"));
-      
-  }
+     else exit(header("Location: funcionario.php"));      
+  }  
 
 ?>
 <div id="header"> <?php include("../template/header.php"); ?> </div>
@@ -62,6 +66,14 @@
           <?php } ?>
           </div>
 
+          <?php
+            foreach($images as $image) {
+              echo '<br>';
+              echo  '<br>';
+              echo  '<p>Imagem abaixo  '.$image.'</p>';
+              echo '<img src="'.$image.'" style="height: 100px; width: 100px;"/><br />';
+            }
+          ?>
       </div>
     </div>
     
