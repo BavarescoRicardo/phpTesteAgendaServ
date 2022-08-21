@@ -3,7 +3,7 @@
   <div class="modal-dialog modal-xl" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="cadastroModalLabel">Novo Profissional</h5>
+        <h5 class="modal-title  w-100 text-center" id="cadastroModalLabel">Cadastro de Funcionário</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -34,9 +34,9 @@
 
           <div class="row">
             <div class="col">
-              <label class="btn btn-default">
+              <label class="btn btn-default" style="margin-top: -50px; margin-left: 120px">
                   <input type="file" id="myfile" name='myfile' hidden>
-                  <i class="fa fa-camera fa-5x" aria-hidden="true"></i>
+                  <i class="fa fa-camera fa-5x"  aria-hidden="true"></i>
               </label>
 
               
