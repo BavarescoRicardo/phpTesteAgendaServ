@@ -58,43 +58,58 @@
           <div class="row">
             <div class="col">
               <div class="card border-dark" style="border: 1px solid;">
-                <h5 class="card-title">Commissão em serviços</h5>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                  <label class="form-check-label" for="inlineRadio1">Sim</label>
+                <div class="card-body">
+                  <h5>Comissão por serviço?</h5>
+                  <label class="radio-inline">
+                    <input type="radio" name="optradio" id="inlineRadio1">
+                    <label class="form-check-label" for="inlineRadio1">Sim</label>
+                  </label>
+                  <label class="radio-inline">
+                    <input type="radio" name="optradio" id="inlineRadio2">
+                    <label class="form-check-label" for="inlineRadio2">Não</label>
+                  </label>
                 </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                  <label class="form-check-label" for="inlineRadio2">Não</label>
-                </div>
-              </div>
+              </div>              
             </div>
+
+
             <div class="col">
               <div class="card border-dark" style="border: 1px solid;">
-                  <h5 class="card-title">Recebe salário fixo?</h5>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                  <label class="form-check-label" for="inlineRadio1">Sim</label>
+                  <div class="card-body">
+                    <h5>Recebe salário fixo?</h5>
+                    <label class="radio-inline">
+                      <input type="radio" name="optradio" id="inlineRadio1">
+                      <label class="form-check-label" for="inlineRadio1">Sim</label>
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="optradio" id="inlineRadio2">
+                      <label class="form-check-label" for="inlineRadio2">Não</label>
+                    </label>
+                  </div>
                 </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                  <label class="form-check-label" for="inlineRadio2">Não</label>
-                </div>
-              </div>
             </div>
 
             <div class="col">
               <div class="card border-dark" style="border: 1px solid;">
-                <h5 class="card-title">Commissão em produtos</h5>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                  <label class="form-check-label" for="inlineRadio1">Sim</label>
+                  <div class="card-body">
+                    <h5>Commisão em produtos?</h5>
+                    <label class="radio-inline">
+                      <input type="radio" name="optradio" id="inlineRadio1">
+                      <label class="form-check-label" for="inlineRadio1">Sim</label>
+                    </label>
+                    <label class="radio-inline">
+                      <input type="radio" name="optradio" id="inlineRadio2">
+                      <label class="form-check-label" for="inlineRadio2">Não</label>
+                    </label>
+                  </div>
                 </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                  <label class="form-check-label" for="inlineRadio2">Não</label>
-                </div>
-              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-3">
+            <label for="percentual">% da comissão</label>
+              <input type="text" class="form-control" name="percentual" id="percentual">
             </div>
           </div>
 
