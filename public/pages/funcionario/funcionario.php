@@ -39,7 +39,7 @@
           <div class="container-fluid">
             <div class="row mb-2">
               <div class="col-sm-6">
-                <h1 class="m-0">Funcionarios</h1>
+                <br>
                 <button type="button" class="btn btn-success" data-toggle="modal" data-target="#cadastroModal">Adicionar Profissional</button>
               </div>
             </div>
