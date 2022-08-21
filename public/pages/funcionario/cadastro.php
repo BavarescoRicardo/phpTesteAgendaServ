@@ -24,7 +24,7 @@
               <div class="col">
                 <div class="form-group">
                   <label for="permissao">Permissao:</label>
-                  <select class="form-select">
+                  <select class="browser-default custom-select">
                     <option>Possui</option>
                     <option>Não Possui</option>
                   </select> 
