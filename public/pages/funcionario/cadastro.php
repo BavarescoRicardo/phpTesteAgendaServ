@@ -60,11 +60,11 @@
               <div class="card border-dark" style="border: 1px solid;">
                 <div class="card-body">
                   <h5>Comissão por serviço?</h5>
-                  <label class="radio-inline">
+                  <label class="radio-inline" style="font-weight: normal;">
                     <input type="radio" name="optradio" id="inlineRadio1">
                     <label class="form-check-label" for="inlineRadio1">Sim</label>
                   </label>
-                  <label class="radio-inline">
+                  <label class="radio-inline" style="font-weight: normal;">
                     <input type="radio" name="optradio" id="inlineRadio2">
                     <label class="form-check-label" for="inlineRadio2">Não</label>
                   </label>
@@ -77,11 +77,11 @@
               <div class="card border-dark" style="border: 1px solid;">
                   <div class="card-body">
                     <h5>Recebe salário fixo?</h5>
-                    <label class="radio-inline">
+                    <label class="radio-inline" style="font-weight: normal;">
                       <input type="radio" name="optradio" id="inlineRadio1">
                       <label class="form-check-label" for="inlineRadio1">Sim</label>
                     </label>
-                    <label class="radio-inline">
+                    <label class="radio-inline" style="font-weight: normal;">
                       <input type="radio" name="optradio" id="inlineRadio2">
                       <label class="form-check-label" for="inlineRadio2">Não</label>
                     </label>
@@ -93,11 +93,11 @@
               <div class="card border-dark" style="border: 1px solid;">
                   <div class="card-body">
                     <h5>Commisão em produtos?</h5>
-                    <label class="radio-inline">
+                    <label class="radio-inline" style="font-weight: normal;">
                       <input type="radio" name="optradio" id="inlineRadio1">
                       <label class="form-check-label" for="inlineRadio1">Sim</label>
                     </label>
-                    <label class="radio-inline">
+                    <label class="radio-inline" style="font-weight: normal;">
                       <input type="radio" name="optradio" id="inlineRadio2">
                       <label class="form-check-label" for="inlineRadio2">Não</label>
                     </label>
