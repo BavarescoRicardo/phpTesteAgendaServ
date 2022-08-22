@@ -1,3 +1,15 @@
+<?php
+
+  if(isset($_POST["editar"])) {
+    echo 'Tentando editar';    
+
+    
+    if (headers_sent()) die("O redirecionamento falhou. Por favor, clique neste link para ser redirecionado: <a href='funcionario.php'>Promoção</a>");
+    else exit(header("Location: funcionario.php"));      
+}  
+
+?>
+
 <!-- Modal -->
 <div class="modal fade" id="cadastroModal" tabindex="-1" role="dialog" aria-labelledby="cadastroModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-xl" role="document">
@@ -127,3 +139,9 @@
 
   </div>
 </div>
+
+<script>
+function setaDadosModal(valor) {
+    document.getElementById('nome').value = "Editando";
+}
+</script>
