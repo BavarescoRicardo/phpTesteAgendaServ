@@ -37,7 +37,7 @@
             <input class="form-control col-lg-12 col-xs-12" id="valor" name="valor" type="text"
                 onkeyup="formatarMoeda();" placeholder="R$ "
                 required oninvalid="this.setCustomValidity('INFORME O VALOR')" 
-                oninput="this.setCustomValidity('')" "/>
+                oninput="this.setCustomValidity('')"/>
         </div>
     </div>
     <div class="row">
