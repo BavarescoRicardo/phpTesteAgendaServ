@@ -54,6 +54,13 @@
                   <div class="col-sm-3">
                     <div class="card border-dark" style="border: 1px solid;">
                       <div class="card-body">
+
+                        <div class="text-right btn-editar">
+                          <button type="button" id="editar"  name="editar"  onclick="setaDadosModal(<?php echo $item['id_promocao']; ?>)"
+                            class="btn btn-secondary" data-toggle="modal" data-target="#exampleModalCenter">
+                            <i class="fas fa-edit"></i></button>
+                        </div>
+
                         <div class="text-center">
                           <?php echo '<img src="'.$funcionario['caminho_imagem'].'" class="rounded" style="height: 100px; width: 100px;"/><br />';?>
                           <?php echo $funcionario['nome']; ?>
