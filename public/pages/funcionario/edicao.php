@@ -15,7 +15,7 @@
   <div class="modal-dialog modal-xl" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title  w-100 text-center" id="edicaoModalLabel">Cadastro de Funcionário</h5>
+        <h5 class="modal-title  w-100 text-center" id="edicaoModalLabel">Edição de Funcionário</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -29,17 +29,14 @@
               </div>
               <div class="col">
                 <div class="form-group">
-                    <label for="nome">Nome:</label>
-                    <input type="text" class="form-control" id="nome" name="nome">                
+                    <label for="nome-editar">Nome:</label>
+                    <input type="text" class="form-control" id="nome-editar" name="nome-editar">                
                 </div>
               </div>
               <div class="col">
                 <div class="form-group">
-                  <label for="permissao">Permissao:</label>
-                  <select name="permissao" id="permissao" class="browser-default custom-select">
-                    <option value="S">Possui</option>
-                    <option value="N">Não Possui</option>
-                  </select> 
+                  <label for="telefone">telefone/login:</label>
+                  <input type="text" class="form-control" id="telefone" name="telefone">                
                 </div>
               </div>
             </div>
@@ -53,21 +50,15 @@
             </div>
             <div class="col">
               <div class="form-group">
-                <label for="telefone">telefone:</label>
-                <input type="text" class="form-control" id="telefone" name="telefone">                
+                <label for="permissao">Permissao:</label>
+                <select name="permissao" id="permissao" class="browser-default custom-select">
+                  <option value="S">Possui</option>
+                  <option value="N">Não Possui</option>
+                </select> 
               </div>
             </div>
             <div class="col">
-              <div class="form-group">
-                <label for="senha">Senha:</label>
-                <input type="text" class="form-control" id="senha" name="senha" placeholder="Nova senha">                
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col">
-              <div class="card border-dark" style="border: 1px solid;">
+            <div class="card border-dark" style="border: 1px solid;">
                 <div class="card-body">
                   <h5>Comissão por serviço?</h5>
                   <label class="radio-inline" style="font-weight: normal;">
@@ -79,24 +70,19 @@
                     <label class="form-check-label" for="inlineRadio2">Não</label>
                   </label>
                 </div>
-              </div>              
+              </div> 
             </div>
+          </div>
 
-
+          <div class="row">
             <div class="col">
-              <div class="card border-dark" style="border: 1px solid;">
-                  <div class="card-body">
-                    <h5>Recebe salário fixo?</h5>
-                    <label class="radio-inline" style="font-weight: normal;">
-                      <input type="radio" name="salariofixo" id="salariofixo" value="S">
-                      <label class="form-check-label" for="salariofixo">Sim</label>
-                    </label>
-                    <label class="radio-inline" style="font-weight: normal;">
-                      <input type="radio" name="optradio" id="salariofixo" value="N">
-                      <label class="form-check-label" for="salariofixo">Não</label>
-                    </label>
-                  </div>
-                </div>
+
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <label for="senha">Senha:</label>
+                <input type="text" class="form-control" id="senha" name="senha" placeholder="Nova senha">                
+              </div>             
             </div>
 
             <div class="col">
@@ -113,13 +99,6 @@
                     </label>
                   </div>
                 </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-md-3">
-            <label for="percentual">% da comissão</label>
-              <input type="text" class="form-control" name="percentual" id="percentual">
             </div>
           </div>
 

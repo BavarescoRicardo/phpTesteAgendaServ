@@ -92,7 +92,7 @@
 <div id="header"> <?php include("../template/footer.php"); ?> </div>
 
 <script>
-function setaDadosModal(valor) {  
-    document.getElementById('nome').value = $valor;
+function setaDadosModal(valor) {
+    document.getElementById('nome-editar').value = valor;
 }
 </script>
