@@ -37,9 +37,7 @@
               <label class="btn btn-default" style="margin-top: -50px; margin-left: 120px">
                   <input type="file" id="myfile" name='myfile' hidden>
                   <i class="fa fa-camera fa-5x"  aria-hidden="true"></i>
-              </label>
-
-              
+              </label>              
             </div>
             <div class="col">
               <div class="form-group">

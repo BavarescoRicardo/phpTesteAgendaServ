@@ -56,9 +56,9 @@
                           <hr>
                           <P>Comissão Pendente</P>
                           <?php echo '<p>R$ '.$funcionario['comissaopend'].'</p>' ?> <br>                        
-                          <button type="button" style="color: black; width: 100px" class="btn btn-success">Pagar</button>
-                          </div>
+                          <button type="button" class="btn btn-success"><i class="fas fa-money-bill-alt" aria-hidden="true"></i> Pagar</button>                          
                         </div>
+                      </div>
                     </div>
                   </div>                           
               <?php } ?>
