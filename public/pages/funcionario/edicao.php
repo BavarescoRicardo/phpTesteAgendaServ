@@ -11,11 +11,11 @@
 ?>
 
 <!-- Modal -->
-<div class="modal fade" id="cadastroModal" tabindex="-1" role="dialog" aria-labelledby="cadastroModalLabel" aria-hidden="true">
+<div class="modal fade" id="edicaoModal" tabindex="-1" role="dialog" aria-labelledby="edicaoModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-xl" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title  w-100 text-center" id="cadastroModalLabel">Cadastro de Funcionário</h5>
+        <h5 class="modal-title  w-100 text-center" id="edicaoModalLabel">Cadastro de Funcionário</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>

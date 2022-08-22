@@ -37,14 +37,15 @@
 
 <div class="wrapper"> 
   <div id="header"> <?php include("../template/menu.php"); ?> </div>
-    <div id="header"> <?php include("cadastro.php"); ?> </div>    
+  <div id="header"> <?php include("cadastro.php"); ?> </div>
+  <div id="header"> <?php include("edicao.php"); ?> </div>    
     <div class="content-wrapper ">    
       <div class="content-header">
           <div class="container-fluid">
             <div class="row mb-2">
               <div class="col-sm-6">
                 <br>
-                <button type="button" class="btn btn-success" onclick="setaDadosModal(' ')" data-toggle="modal" data-target="#cadastroModal">Adicionar Profissional</button>
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#cadastroModal">Adicionar Profissional</button>
               </div>
             </div>
 
@@ -57,7 +58,7 @@
 
                         <div class="text-right btn-editar">
                           <button type="button" id="editar"  name="editar"  onclick="setaDadosModal(<?php echo $funcionario['id_funcionario']; ?>)"
-                            class="btn btn-secondary" data-toggle="modal" data-target="#cadastroModal">
+                            class="btn btn-secondary" data-toggle="modal" data-target="#edicaoModal">
                             <i class="fas fa-edit"></i></button>
                         </div>
 
@@ -91,7 +92,7 @@
 <div id="header"> <?php include("../template/footer.php"); ?> </div>
 
 <script>
-function setaDadosModal(valor) {
-    document.getElementById('nome').value = valor;
+function setaDadosModal(valor) {  
+    document.getElementById('nome').value = $valor;
 }
 </script>
