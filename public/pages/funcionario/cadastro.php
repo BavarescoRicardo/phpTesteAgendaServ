@@ -114,10 +114,8 @@
           <br/>
           <div class="row">
             <div class="col text-center">
-              <input type="button" class="btn btn-danger" data-dismiss="modal" value="Cancelar">
-            </div>
-            <div class="col text-center">              
-              <input type="submit" name="salvar" class="btn btn-success" value="Salvar">
+              <input type="button" class="btn btn-danger btn-lg mr-5" data-dismiss="modal" value="Cancelar">
+              <input type="submit" name="salvar" class="btn btn-success btn-lg mr-5" value="Salvar">
             </div>
           </div>
           
