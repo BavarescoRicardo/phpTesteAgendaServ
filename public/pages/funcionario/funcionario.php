@@ -12,7 +12,6 @@
         move_uploaded_file($image['tmp_name'],"../imagens/".$image['name']);
 
         $caminho = "../imagens/".$image['name'];
-        echo($caminho);
       // Tratamento de imagem fim
 
       $nome      = $_POST['nome'];
@@ -32,7 +31,16 @@
      else exit(header("Location: funcionario.php"));      
   }  
 
+  if(isset($_POST["editado"])) {
+    echo 'Tentando editar';    
+
+    
+    if (headers_sent()) die("O redirecionamento falhou. Por favor, clique neste link para ser redirecionado: <a href='funcionario.php'>Promoção</a>");
+    else exit(header("Location: funcionario.php"));      
+}
+
 ?>
+
 <div id="header"> <?php include("../template/header.php"); ?> </div>
 
 <div class="wrapper"> 
@@ -55,19 +63,18 @@
                   <div class="col-sm-3">
                     <div class="card border-dark" style="border: 1px solid;">
                       <div class="card-body">
-
                         <div class="text-right btn-editar">
                           <button type="button" id="editar"  name="editar"  onclick="setaDadosModal(<?php echo $funcionario['id_funcionario']; ?>)"
                             class="btn btn-secondary" data-toggle="modal" data-target="#edicaoModal">
                             <i class="fas fa-edit"></i></button>
                         </div>
-
+                          <input id="codigo" name="codigo" type="hidden">
                         <div class="text-center">
                           <?php echo '<img src="'.$funcionario['caminho_imagem'].'" class="rounded" style="height: 100px; width: 100px;"/><br />';?>
                           <?php echo $funcionario['nome']; ?>
                           <hr>
                           <P>Comissão Pendente</P>
-                          <?php echo '<p>R$ '.$funcionario['comissaopend'].'</p>' ?> <br>                        
+                          <h5 class="text-info"><?php echo '<p>R$ '.$funcionario['comissaopend'].'</p>' ?></h5> <br>                        
                           <button type="button" class="btn btn-success"><i class="fas fa-money-bill-alt" aria-hidden="true"></i> Pagar</button>                          
                         </div>
                       </div>
@@ -93,6 +100,6 @@
 
 <script>
 function setaDadosModal(valor) {
-    document.getElementById('nome-editar').value = valor;
+    document.getElementById('codigoedt').value = valor;
 }
 </script>

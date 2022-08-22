@@ -1,12 +1,11 @@
 <?php
+   echo "<script>console.log('Debug Objects: " . "' );</script>";
 
   if(isset($_POST["editar"])) {
-    echo 'Tentando editar';    
-
-    
-    if (headers_sent()) die("O redirecionamento falhou. Por favor, clique neste link para ser redirecionado: <a href='funcionario.php'>Promoção</a>");
-    else exit(header("Location: funcionario.php"));      
-}  
+    $objFuncionario = new funcionarioview();
+    $id = $_POST['codigoedt'];
+    $funcionario = $objFuncionario->getFuncionarioUnico($id);
+  }
 
 ?>
 
@@ -25,18 +24,18 @@
           <form role="form" action="funcionario.php" method="POST" enctype="multipart/form-data">
             <div class="row">
               <div class="col">
-
+                <input id="codigoedt" name="codigoedt" type="numeric">
               </div>
               <div class="col">
                 <div class="form-group">
-                    <label for="nome-editar">Nome:</label>
-                    <input type="text" class="form-control" id="nome-editar" name="nome-editar">                
+                    <label for="nomeedt">Nome:</label>
+                    <input type="text" class="form-control" id="nomeedt" name="nomeedt">                
                 </div>
               </div>
               <div class="col">
                 <div class="form-group">
                   <label for="telefone">telefone/login:</label>
-                  <input type="text" class="form-control" id="telefone" name="telefone">                
+                  <input type="text" class="form-control" id="telefone" name="telefone">
                 </div>
               </div>
             </div>
@@ -108,13 +107,10 @@
               <input type="button" class="btn btn-danger btn-lg mr-5" data-dismiss="modal" value="Cancelar">
               <input type="submit" name="salvar" class="btn btn-success btn-lg mr-5" value="Salvar">
             </div>
-          </div>
-          
+          </div>          
         </form>
       </div>
-
       </div>
     </div>
-
   </div>
 </div>
