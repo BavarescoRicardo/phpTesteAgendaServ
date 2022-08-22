@@ -16,10 +16,14 @@
       // Tratamento de imagem fim
 
       $nome      = $_POST['nome'];
-      $email     = $_POST['email'];
+      $permissao     = $_POST['permissao'];
       $telefone  = $_POST['telefone'];
-      $senha     = $_POST['senha'];      
-      $objFuncionario->insertFuncionario($nome, $email, $senha,  $telefone, $caminho);  
+      $senha     = $_POST['senha'];
+      $comissaoserv     = $_POST['comissaoserv'];
+      $salariofix     = $_POST['salariofixo'];
+      $comissaoprod     = $_POST['comissaoprod'];
+      $percentual     = $_POST['percentual'];
+      $objFuncionario->insertFuncionario($nome, $permissao, $telefone,  $senha, $comissaoserv, $salariofix, $comissaoprod, $percentual, $caminho);
       
      $_SESSION['message'] = "SALVO COM SUCESSO";
      $_SESSION['msg_type'] = "success";

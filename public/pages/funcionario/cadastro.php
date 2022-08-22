@@ -24,9 +24,9 @@
               <div class="col">
                 <div class="form-group">
                   <label for="permissao">Permissao:</label>
-                  <select class="browser-default custom-select">
-                    <option>Possui</option>
-                    <option>Não Possui</option>
+                  <select name="permissao" id="permissao" class="browser-default custom-select">
+                    <option value="S">Possui</option>
+                    <option value="N">Não Possui</option>
                   </select> 
                 </div>
               </div>
@@ -59,11 +59,11 @@
                 <div class="card-body">
                   <h5>Comissão por serviço?</h5>
                   <label class="radio-inline" style="font-weight: normal;">
-                    <input type="radio" name="optradio" id="inlineRadio1">
-                    <label class="form-check-label" for="inlineRadio1">Sim</label>
+                    <input type="radio" name="comissaoserv" id="comissaoserv" value="S">
+                    <label class="form-check-label" for="comissaoserv">Sim</label>
                   </label>
                   <label class="radio-inline" style="font-weight: normal;">
-                    <input type="radio" name="optradio" id="inlineRadio2">
+                    <input type="radio" name="comissaoserv" id="comissaoserv" value="N">
                     <label class="form-check-label" for="inlineRadio2">Não</label>
                   </label>
                 </div>
@@ -76,12 +76,12 @@
                   <div class="card-body">
                     <h5>Recebe salário fixo?</h5>
                     <label class="radio-inline" style="font-weight: normal;">
-                      <input type="radio" name="optradio" id="inlineRadio1">
-                      <label class="form-check-label" for="inlineRadio1">Sim</label>
+                      <input type="radio" name="salariofixo" id="salariofixo" value="S">
+                      <label class="form-check-label" for="salariofixo">Sim</label>
                     </label>
                     <label class="radio-inline" style="font-weight: normal;">
-                      <input type="radio" name="optradio" id="inlineRadio2">
-                      <label class="form-check-label" for="inlineRadio2">Não</label>
+                      <input type="radio" name="optradio" id="salariofixo" value="N">
+                      <label class="form-check-label" for="salariofixo">Não</label>
                     </label>
                   </div>
                 </div>
@@ -92,12 +92,12 @@
                   <div class="card-body">
                     <h5>Commisão em produtos?</h5>
                     <label class="radio-inline" style="font-weight: normal;">
-                      <input type="radio" name="optradio" id="inlineRadio1">
-                      <label class="form-check-label" for="inlineRadio1">Sim</label>
+                      <input type="radio" name="comissaoprod" id="comissaoprod" value="S">
+                      <label class="form-check-label" for="comissaoprod">Sim</label>
                     </label>
                     <label class="radio-inline" style="font-weight: normal;">
-                      <input type="radio" name="optradio" id="inlineRadio2">
-                      <label class="form-check-label" for="inlineRadio2">Não</label>
+                      <input type="radio" name="comissaoprod" id="comissaoprod" value="N">
+                      <label class="form-check-label" for="comissaoprod">Não</label>
                     </label>
                   </div>
                 </div>
@@ -113,10 +113,10 @@
 
           <br/>
           <div class="row">
-            <div class="col">
+            <div class="col text-center">
               <input type="button" class="btn btn-danger" data-dismiss="modal" value="Cancelar">
             </div>
-            <div class="col">              
+            <div class="col text-center">              
               <input type="submit" name="salvar" class="btn btn-success" value="Salvar">
             </div>
           </div>

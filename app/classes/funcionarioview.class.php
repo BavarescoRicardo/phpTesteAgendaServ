@@ -6,7 +6,7 @@ class funcionarioview extends funcionario {
         return $this->getFuncionariosLista();
     }
 
-    public function insertFuncionario($nome, $email, $senha, $telefone, $caminho) {
-        $this->insert($nome, $email, $senha, $telefone, $caminho);
+    public function insertFuncionario($nome, $permissao, $telefone,  $senha, $comissaoserv, $salariofix, $comissaoprod, $percentual, $caminho) {
+        $this->insert($nome, $permissao, $telefone,  $senha, $comissaoserv, $salariofix, $comissaoprod, $percentual, $caminho);  
     }
 }
