@@ -1,15 +1,4 @@
-<?php
-   echo "<script>console.log('Debug Objects: " . "' );</script>";
 
-  if(isset($_POST["editar"])) {
-    $objFuncionario = new funcionarioview();
-    $id = $_POST['codigoedt'];
-    $funcionario = $objFuncionario->getFuncionarioUnico($id);
-  }
-
-?>
-
-<!-- Modal -->
 <div class="modal fade" id="edicaoModal" tabindex="-1" role="dialog" aria-labelledby="edicaoModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-xl" role="document">
     <div class="modal-content">
@@ -35,7 +24,7 @@
               <div class="col">
                 <div class="form-group">
                   <label for="telefone">telefone/login:</label>
-                  <input type="text" class="form-control" id="telefone" name="telefone">
+                  <input type="text" class="form-control" id="telefone" name="telefone" value="<?php echo 'R$ '.$funcionarios[0]['id_funcionario'] ?>">
                 </div>
               </div>
             </div>
