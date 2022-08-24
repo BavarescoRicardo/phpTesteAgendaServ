@@ -4,7 +4,7 @@
     $objFuncionario = new funcionarioview();
     $funcionarios = $objFuncionario->getFuncionarios();
     $images = glob("../imagens/*");
-    $idf = 0;
+    $indice = 0;
 
     if(isset($_POST["salvar"])) {
 
@@ -56,7 +56,7 @@
                     <div class="card border-dark" style="border: 1px solid;">                    
                       <div class="card-body">
                         <div class="text-right btn-edita">
-                          <button type="button" id="editar"  name="editar"  onclick="setaDadosModal(<?php echo $funcionario['id_funcionario']; ?>)"
+                          <button type="button" id="editar"  name="editar"  onclick="setaDadosModal(<?php echo $indice; ?>)"
                             class="btn btn-secondary" data-toggle="modal" data-target="#edicaoModal">
                             <i class="fas fa-edit"></i></button>                          
                         </div>
@@ -72,7 +72,7 @@
                       </div>                      
                     </div>
                   </div>
-              <?php } ?>
+              <?php $indice ++;} ?>
             </div>
           </div>
 
@@ -92,6 +92,11 @@
 
 <script>
 function setaDadosModal(valor) {
-    document.getElementById('nomeedt').value = valor;
+    console.log(valor);
+    var obj = <?php echo json_encode($funcionarios); ?>;
+    console.log(obj);
+    document.getElementById('codigoedt').value = obj[valor].id_funcionario;
+    document.getElementById('nomeedt').value = obj[valor].nome;
+    document.getElementById('telefoneedt').value = obj[valor].id_funcionario;
 }
 </script>
