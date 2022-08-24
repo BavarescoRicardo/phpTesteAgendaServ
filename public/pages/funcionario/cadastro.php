@@ -60,7 +60,7 @@
             <div class="col">
               <div class="form-group">
                 <label for="senha">Senha:</label>
-                <input type="text" class="form-control" id="senha" name="senha" placeholder="Nova senha">                
+                <input type="password" class="form-control" id="senha" name="senha" placeholder="Nova senha">                
               </div>
             </div>
           </div>
