@@ -4,6 +4,7 @@
     $objFuncionario = new funcionarioview();
     $funcionarios = $objFuncionario->getFuncionarios();
     $images = glob("../imagens/*");
+    $idf = 0;
 
     if(isset($_POST["salvar"])) {
 
@@ -15,12 +16,12 @@
       // Tratamento de imagem fim
 
       $nome      = $_POST['nome'];
-      $permissao     = $_POST['permissao'];
+      $permissao = $_POST['permissao'];
       $telefone  = $_POST['telefone'];
       $senha     = $_POST['senha'];
-      $comissaoserv     = $_POST['comissaoserv'];
+      $comissaoserv   = $_POST['comissaoserv'];
       $salariofix     = $_POST['salariofixo'];
-      $comissaoprod     = $_POST['comissaoprod'];
+      $comissaoprod   = $_POST['comissaoprod'];
       $percentual     = $_POST['percentual'];
       $objFuncionario->insertFuncionario($nome, $permissao, $telefone,  $senha, $comissaoserv, $salariofix, $comissaoprod, $percentual, $caminho);
       
@@ -29,15 +30,7 @@
      
      if (headers_sent()) die("O redirecionamento falhou. Por favor, clique neste link para ser redirecionado: <a href='funcionario.php'>Promoção</a>");
      else exit(header("Location: funcionario.php"));      
-  }  
-
-  if(isset($_POST["editado"])) {
-    echo 'Tentando editar';    
-
-    
-    if (headers_sent()) die("O redirecionamento falhou. Por favor, clique neste link para ser redirecionado: <a href='funcionario.php'>Promoção</a>");
-    else exit(header("Location: funcionario.php"));      
-}
+  }
 
 ?>
 
@@ -56,19 +49,18 @@
                 <button type="button" class="btn btn-success" data-toggle="modal" data-target="#cadastroModal">Adicionar Profissional</button>
               </div>
             </div>
-
-            <div class="row mb-2">
-            <?php
-              foreach($funcionarios as $funcionario ){ ?>
+            <div class="row mb-2">            
+              <?php            
+                foreach($funcionarios as $funcionario ){ ?>                
                   <div class="col-sm-3">
-                    <div class="card border-dark" style="border: 1px solid;">
+                    <div class="card border-dark" style="border: 1px solid;">                    
                       <div class="card-body">
-                        <div class="text-right btn-editar">
+                        <div class="text-right btn-edita">
                           <button type="button" id="editar"  name="editar"  onclick="setaDadosModal(<?php echo $funcionario['id_funcionario']; ?>)"
                             class="btn btn-secondary" data-toggle="modal" data-target="#edicaoModal">
-                            <i class="fas fa-edit"></i></button>
+                            <i class="fas fa-edit"></i></button>                          
                         </div>
-                          <input id="codigo" name="codigo" type="hidden">
+                          <input id="codigof" name="codigof" value="<?php echo $funcionario['id_funcionario']; ?>" type="hidden">
                         <div class="text-center">
                           <?php echo '<img src="'.$funcionario['caminho_imagem'].'" class="rounded" style="height: 100px; width: 100px;"/><br />';?>
                           <?php echo $funcionario['nome']; ?>
@@ -77,12 +69,12 @@
                           <h5 class="text-info"><?php echo '<p>R$ '.$funcionario['comissaopend'].'</p>' ?></h5> <br>                        
                           <button type="button" class="btn btn-success"><i class="fas fa-money-bill-alt" aria-hidden="true"></i> Pagar</button>                          
                         </div>
-                      </div>
+                      </div>                      
                     </div>
-                  </div>                           
+                  </div>
               <?php } ?>
-              </div>
             </div>
+          </div>
 
         </div>        
         <div class="content" >
@@ -100,6 +92,6 @@
 
 <script>
 function setaDadosModal(valor) {
-    document.getElementById('codigoedt').value = valor;
+    document.getElementById('nomeedt').value = valor;
 }
 </script>

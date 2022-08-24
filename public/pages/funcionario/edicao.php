@@ -1,4 +1,3 @@
-
 <div class="modal fade" id="edicaoModal" tabindex="-1" role="dialog" aria-labelledby="edicaoModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-xl" role="document">
     <div class="modal-content">
@@ -13,18 +12,18 @@
           <form role="form" action="funcionario.php" method="POST" enctype="multipart/form-data">
             <div class="row">
               <div class="col">
-                <input id="codigoedt" name="codigoedt" type="numeric">
+                <input id="codigoedt" name="codigoedt" type="hidden">
               </div>
               <div class="col">
                 <div class="form-group">
                     <label for="nomeedt">Nome:</label>
-                    <input type="text" class="form-control" id="nomeedt" name="nomeedt">                
+                    <input type="text" class="form-control" id="nomeedt" name="nomeedt">
                 </div>
               </div>
               <div class="col">
                 <div class="form-group">
                   <label for="telefone">telefone/login:</label>
-                  <input type="text" class="form-control" id="telefone" name="telefone" value="<?php echo 'R$ '.$funcionarios[0]['id_funcionario'] ?>">
+                  <input type="text" class="form-control" id="telefoneedt" name="telefoneedt">
                 </div>
               </div>
             </div>
