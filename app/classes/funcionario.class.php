@@ -34,8 +34,7 @@ class funcionario extends Database {
 
     protected function insert($nome, $permissao, $telefone,  $senha, $comissaoserv, $salariofix, $comissaoprod, $percentual, $caminho) {
        
-        $sql = "INSERT INTO funcionario (nome, permissao, telefone,  senha, comissaoserv, salariofixo, comissaoprod, percentual, caminho_imagem) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
-        // $funcionario_antigo = getFuncionario($id);
+        $sql = "INSERT INTO funcionario (nome, permissao, telefone,  senha, comissaoserv, salariofixo, comissaoprod, percentual, caminho_imagem) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";        
 
         $permissao = 'N';
         $comissaoserv = 'N';
@@ -58,6 +57,8 @@ class funcionario extends Database {
     protected function update($telefone, $senha, $nome, $caminho, $permissao, $comissaoserv, $comissaoprod, $percentual, $id) {
        
         $sqlUpdate = "UPDATE funcionario SET `telefone` = ?, `senha` = ?, `nome` = ?, `caminho_imagem` = ?, `permissao` = ?, `comissaoserv` = ?, `comissaoprod` = ?, `percentual` = ? WHERE (`id_funcionario` = ?)";
+        $funcionario_antigo = $this->getFuncionario($id);
+        $caminho = $funcionario_antigo['caminho_imagem'];
 
         try {
             $stm = $this->connect()->prepare($sqlUpdate);

@@ -33,6 +33,13 @@
   }
 
   if(isset($_POST["editar"])) {
+    // Tratamento de imagem inicio
+      $image=$_FILES['myfileedt'];
+      move_uploaded_file($image['tmp_name'],"../imagens/".$image['name']);
+
+      $caminhoedt = "../imagens/".$image['name'];
+    // Tratamento de imagem fim
+        
     $id    = $_POST['codigoedt'];
     $nomeedt      = $_POST['nomeedt'];
     $permissaoedt = $_POST['permissaoedt'];
@@ -41,7 +48,7 @@
     $comissaoservedt   = $_POST['comissaoservedt'];
     $comissaoprodedt   = $_POST['comissaoprodedt'];
     // $percentual     = $_POST['percentualedt'];
-    $percentual = 0.00;
+    $percentualedt = 0.00;
     $objFuncionario->updateFuncionario($telefoneedt, $senhaedt, $nomeedt, $caminhoedt, $permissaoedt, $comissaoservedt, $comissaoprodedt, $percentualedt, $id);
     
    $_SESSION['message'] = "SALVO COM SUCESSO";
