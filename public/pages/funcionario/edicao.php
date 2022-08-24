@@ -67,8 +67,8 @@
             </div>
             <div class="col">
               <div class="form-group">
-                <label for="senha">Senha:</label>
-                <input type="password" class="form-control" id="senha" name="senha" placeholder="Nova senha">                
+                <label for="senhaedt">Senha:</label>
+                <input type="password" class="form-control" id="senhaedt" name="senhaedt" placeholder="Nova senha">                
               </div>             
             </div>
 

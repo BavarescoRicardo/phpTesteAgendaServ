@@ -114,6 +114,7 @@ function setaDadosModal(valor) {
     console.log(obj);
     document.getElementById('codigoedt').value = obj[valor].id_funcionario;
     document.getElementById('nomeedt').value = obj[valor].nome;
-    document.getElementById('telefoneedt').value = obj[valor].id_funcionario;
+    document.getElementById('telefoneedt').value = obj[valor].telefone;
+    document.getElementById('senhaedt').value = obj[valor].senha;
 }
 </script>
