@@ -32,6 +32,23 @@
      else exit(header("Location: funcionario.php"));      
   }
 
+  if(isset($_POST["editar"])) {
+    $codigoedt    = $_POST['codigoedt'];
+    $nomeedt      = $_POST['nomeedt'];
+    $permissaoedt = $_POST['permissaoedt'];
+    $telefoneedt  = $_POST['telefoneedt'];
+    $senhaedt     = $_POST['senhaedt'];
+    $comissaoservedt   = $_POST['comissaoservedt'];
+    $comissaoprodedt   = $_POST['comissaoprodedt'];
+    $percentual     = $_POST['percentualedt'];
+    $objFuncionario->insertFuncionario($nome, $permissao, $telefone,  $senha, $comissaoserv, $comissaoprod, $percentual, $caminho);
+    
+   $_SESSION['message'] = "SALVO COM SUCESSO";
+   $_SESSION['msg_type'] = "success";
+   
+   if (headers_sent()) die("O redirecionamento falhou. Por favor, clique neste link para ser redirecionado: <a href='funcionario.php'>Promoção</a>");
+   else exit(header("Location: funcionario.php"));   
+  }
 ?>
 
 <div id="header"> <?php include("../template/header.php"); ?> </div>

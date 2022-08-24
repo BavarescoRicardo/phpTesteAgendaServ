@@ -22,7 +22,7 @@
               </div>
               <div class="col">
                 <div class="form-group">
-                  <label for="telefone">telefone/login:</label>
+                  <label for="telefoneedt">telefone/login:</label>
                   <input type="text" class="form-control" id="telefoneedt" name="telefoneedt">
                 </div>
               </div>
@@ -31,14 +31,14 @@
           <div class="row">
             <div class="col">
               <label class="btn btn-default" style="margin-top: -50px; margin-left: 120px">
-                  <input type="file" id="myfile" name='myfile' hidden>
+                  <input type="file" id="myfileedt" name='myfileedt' hidden>
                   <i class="fa fa-camera fa-5x"  aria-hidden="true"></i>
               </label>              
             </div>
             <div class="col">
               <div class="form-group">
-                <label for="permissao">Permissao:</label>
-                <select name="permissao" id="permissao" class="browser-default custom-select">
+                <label for="permissaoedt">Permissao:</label>
+                <select name="permissaoedt" id="permissaoedt" class="browser-default custom-select">
                   <option value="S">Possui</option>
                   <option value="N">Não Possui</option>
                 </select> 
@@ -49,8 +49,8 @@
                 <div class="card-body">
                   <h5>Comissão por serviço?</h5>
                   <label class="radio-inline" style="font-weight: normal;">
-                    <input type="radio" name="comissaoserv" id="comissaoserv" value="S">
-                    <label class="form-check-label" for="comissaoserv">Sim</label>
+                    <input type="radio" name="comissaoservedt" id="comissaoservedt" value="S">
+                    <label class="form-check-label" for="comissaoservedt">Sim</label>
                   </label>
                   <label class="radio-inline" style="font-weight: normal;">
                     <input type="radio" name="comissaoserv" id="comissaoserv" value="N">
@@ -68,7 +68,7 @@
             <div class="col">
               <div class="form-group">
                 <label for="senha">Senha:</label>
-                <input type="text" class="form-control" id="senha" name="senha" placeholder="Nova senha">                
+                <input type="password" class="form-control" id="senha" name="senha" placeholder="Nova senha">                
               </div>             
             </div>
 
@@ -93,7 +93,7 @@
           <div class="row">
             <div class="col text-center">
               <input type="button" class="btn btn-danger btn-lg mr-5" data-dismiss="modal" value="Cancelar">
-              <input type="submit" name="salvar" class="btn btn-success btn-lg mr-5" value="Salvar">
+              <input type="submit" name="editar" class="btn btn-success btn-lg mr-5" value="Salvar">
             </div>
           </div>          
         </form>
