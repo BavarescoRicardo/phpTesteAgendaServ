@@ -35,11 +35,34 @@ class funcionario extends Database {
     protected function insert($nome, $permissao, $telefone,  $senha, $comissaoserv, $salariofix, $comissaoprod, $percentual, $caminho) {
        
         $sql = "INSERT INTO funcionario (nome, permissao, telefone,  senha, comissaoserv, salariofixo, comissaoprod, percentual, caminho_imagem) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        // $funcionario_antigo = getFuncionario($id);
 
+        $permissao = 'N';
+        $comissaoserv = 'N';
+        $salariofix = 'N';
+        $comissaoprod = 'N';
+        $percentual = 0.00;
+        
         try {
             $stm = $this->connect()->prepare($sql);
             
             $stm->execute([$nome, $permissao, $telefone,  $senha, $comissaoserv, $salariofix, $comissaoprod, $percentual, $caminho]);
+            
+        } catch (PDOException $e) {
+            echo "Error: ".$e->getMessage();
+            $this->connect()->rollback();
+        }
+
+    }
+
+    protected function update($telefone, $senha, $nome, $caminho, $permissao, $comissaoserv, $comissaoprod, $percentual, $id) {
+       
+        $sqlUpdate = "UPDATE funcionario SET `telefone` = ?, `senha` = ?, `nome` = ?, `caminho_imagem` = ?, `permissao` = ?, `comissaoserv` = ?, `comissaoprod` = ?, `percentual` = ? WHERE (`id_funcionario` = ?)";
+
+        try {
+            $stm = $this->connect()->prepare($sqlUpdate);
+            
+            $stm->execute([$telefone, $senha, $nome, $caminho, $permissao, $comissaoserv, $comissaoprod, $percentual, $id]);
             
         } catch (PDOException $e) {
             echo "Error: ".$e->getMessage();

@@ -33,15 +33,16 @@
   }
 
   if(isset($_POST["editar"])) {
-    $codigoedt    = $_POST['codigoedt'];
+    $id    = $_POST['codigoedt'];
     $nomeedt      = $_POST['nomeedt'];
     $permissaoedt = $_POST['permissaoedt'];
     $telefoneedt  = $_POST['telefoneedt'];
     $senhaedt     = $_POST['senhaedt'];
     $comissaoservedt   = $_POST['comissaoservedt'];
     $comissaoprodedt   = $_POST['comissaoprodedt'];
-    $percentual     = $_POST['percentualedt'];
-    $objFuncionario->insertFuncionario($nome, $permissao, $telefone,  $senha, $comissaoserv, $comissaoprod, $percentual, $caminho);
+    // $percentual     = $_POST['percentualedt'];
+    $percentual = 0.00;
+    $objFuncionario->updateFuncionario($telefoneedt, $senhaedt, $nomeedt, $caminhoedt, $permissaoedt, $comissaoservedt, $comissaoprodedt, $percentualedt, $id);
     
    $_SESSION['message'] = "SALVO COM SUCESSO";
    $_SESSION['msg_type'] = "success";
@@ -115,6 +116,5 @@ function setaDadosModal(valor) {
     document.getElementById('codigoedt').value = obj[valor].id_funcionario;
     document.getElementById('nomeedt').value = obj[valor].nome;
     document.getElementById('telefoneedt').value = obj[valor].telefone;
-    document.getElementById('senhaedt').value = obj[valor].senha;
 }
 </script>

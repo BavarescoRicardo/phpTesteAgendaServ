@@ -53,8 +53,8 @@
                     <label class="form-check-label" for="comissaoservedt">Sim</label>
                   </label>
                   <label class="radio-inline" style="font-weight: normal;">
-                    <input type="radio" name="comissaoserv" id="comissaoserv" value="N">
-                    <label class="form-check-label" for="inlineRadio2">Não</label>
+                    <input type="radio" name="comissaoservedt" id="comissaoservedt" value="N">
+                    <label class="form-check-label" for="comissaoservedt">Não</label>
                   </label>
                 </div>
               </div> 
@@ -77,12 +77,12 @@
                   <div class="card-body">
                     <h5>Commisão em produtos?</h5>
                     <label class="radio-inline" style="font-weight: normal;">
-                      <input type="radio" name="comissaoprod" id="comissaoprod" value="S">
-                      <label class="form-check-label" for="comissaoprod">Sim</label>
+                      <input type="radio" name="comissaoprodedt" id="comissaoprodedt" value="S">
+                      <label class="form-check-label" for="comissaoprodedt">Sim</label>
                     </label>
                     <label class="radio-inline" style="font-weight: normal;">
-                      <input type="radio" name="comissaoprod" id="comissaoprod" value="N">
-                      <label class="form-check-label" for="comissaoprod">Não</label>
+                      <input type="radio" name="comissaoprodedt" id="comissaoprodedt" value="N">
+                      <label class="form-check-label" for="comissaoprodedt">Não</label>
                     </label>
                   </div>
                 </div>
