@@ -30,7 +30,13 @@
 
           <div class="row">
             <div class="col">
-              <label class="btn btn-default" style="margin-top: -50px; margin-left: 120px">
+            <img src="" class="rounded" name="caminhoedt" id="caminhoedt" style="height: 100px; width: 100px; margin-top: -100px; margin-left: 120px"/>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <label class="btn btn-default" style="margin-top: -10px; margin-left: 120px">
                   <input type="file" id="myfileedt" name='myfileedt' hidden>
                   <i class="fa fa-camera fa-5x"  aria-hidden="true"></i>
               </label>              

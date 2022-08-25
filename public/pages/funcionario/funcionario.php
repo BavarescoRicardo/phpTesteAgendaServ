@@ -119,9 +119,14 @@
 function setaDadosModal(valor) {
     console.log(valor);
     var obj = <?php echo json_encode($funcionarios); ?>;
-    console.log(obj);
+    
+    //console.log(obj);
+    //document.location.reload(true);
     document.getElementById('codigoedt').value = obj[valor].id_funcionario;
     document.getElementById('nomeedt').value = obj[valor].nome;
+    document.getElementById('senhaedt').value = obj[valor].senha;
     document.getElementById('telefoneedt').value = obj[valor].telefone;
+
+    document.getElementById('caminhoedt').src = obj[valor].caminho_imagem;
 }
 </script>
