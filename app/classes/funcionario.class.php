@@ -57,8 +57,6 @@ class funcionario extends Database {
     protected function update($telefone, $senha, $nome, $caminho, $permissao, $comissaoserv, $comissaoprod, $percentual, $id) {
        
         $sqlUpdate = "UPDATE funcionario SET `telefone` = ?, `senha` = ?, `nome` = ?, `caminho_imagem` = ?, `permissao` = ?, `comissaoserv` = ?, `comissaoprod` = ?, `percentual` = ? WHERE (`id_funcionario` = ?)";
-        $funcionario_antigo = $this->getFuncionario($id);
-        $caminho = $funcionario_antigo['caminho_imagem'];
 
         try {
             $stm = $this->connect()->prepare($sqlUpdate);

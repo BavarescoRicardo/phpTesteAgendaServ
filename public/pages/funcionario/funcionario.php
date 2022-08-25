@@ -37,7 +37,14 @@
       $image=$_FILES['myfileedt'];
       move_uploaded_file($image['tmp_name'],"../imagens/".$image['name']);
 
-      $caminhoedt = "../imagens/".$image['name'];
+      // Verifica se imagem foi atualizada
+      if (!empty($image)) {
+        $caminhoedt = "../imagens/".$image['name'];
+      }else {
+        $caminhoedt      = $_POST['caminhoedt.src'];
+      }      
+      
+      $caminhoedt      = $_POST['caminhoedt.src'];
     // Tratamento de imagem fim
         
     $id    = $_POST['codigoedt'];
@@ -117,15 +124,17 @@
 
 <script>
 function setaDadosModal(valor) {
-    console.log(valor);
     var obj = <?php echo json_encode($funcionarios); ?>;
     
-    //console.log(obj);
+    console.log(obj);
     //document.location.reload(true);
     document.getElementById('codigoedt').value = obj[valor].id_funcionario;
     document.getElementById('nomeedt').value = obj[valor].nome;
     document.getElementById('senhaedt').value = obj[valor].senha;
     document.getElementById('telefoneedt').value = obj[valor].telefone;
+    document.getElementById('permissaoedt').value = obj[valor].permissao;
+    document.getElementById('comissaoservedt').checked = (obj[valor].comissaoserv == 'S');
+    document.getElementById('comissaoprodedt').checked = (obj[valor].comissaoprod == 'S');
 
     document.getElementById('caminhoedt').src = obj[valor].caminho_imagem;
 }
