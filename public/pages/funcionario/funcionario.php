@@ -12,6 +12,9 @@
         $image=$_FILES['myfile'];
         move_uploaded_file($image['tmp_name'],"../imagens/".$image['name']);
 
+        error_log("myfile:  ".$_FILES['myfile']);
+
+        // $caminho = "../imagens/".$image['name'];
         $caminho = "../imagens/".$image['name'];
       // Tratamento de imagem fim
 
@@ -33,18 +36,16 @@
   }
 
   if(isset($_POST["editar"])) {
-    // Tratamento de imagem inicio
-      $image=$_FILES['myfileedt'];
-      move_uploaded_file($image['tmp_name'],"../imagens/".$image['name']);
 
-      // Verifica se imagem foi atualizada
-      if (!empty($image)) {
-        $caminhoedt = "../imagens/".$image['name'];
-      }else {
-        $caminhoedt      = $_POST['caminhoedt.src'];
-      }      
-      
-      $caminhoedt      = $_POST['caminhoedt.src'];
+      // Tratamento de imagem inicio
+      $imagedte = $_FILES['myfileedt'];
+      move_uploaded_file($imagedte['tmp_name'],"../imagens/".$imagedte['name']);
+      error_log("logs_imagem  ".$imagedte['tmp_name'],"../imagens/".$imagedte['name']);
+
+      // error_log("myfile:  ".$_FILES['myfile']);
+
+      // $caminho = "../imagens/".$image['name'];
+      $caminhoedt = "../imagens/".$imagedte['name'];
     // Tratamento de imagem fim
         
     $id    = $_POST['codigoedt'];
@@ -126,7 +127,7 @@
 function setaDadosModal(valor) {
     var obj = <?php echo json_encode($funcionarios); ?>;
     
-    console.log(obj);
+    // console.log(obj);
     //document.location.reload(true);
     document.getElementById('codigoedt').value = obj[valor].id_funcionario;
     document.getElementById('nomeedt').value = obj[valor].nome;
@@ -137,5 +138,6 @@ function setaDadosModal(valor) {
     document.getElementById('comissaoprodedt').checked = (obj[valor].comissaoprod == 'S');
 
     document.getElementById('caminhoedt').src = obj[valor].caminho_imagem;
+    document.getElementById('myfileedt').src = obj[valor].caminho_imagem;
 }
 </script>
