@@ -37,7 +37,7 @@
           <div class="row">
             <div class="col">
               <label class="btn btn-default" style="margin-top: -10px; margin-left: 120px">
-                  <input type="file" id="myfileedt" name='myfileedt' hidden>
+                  <input type="file" id="myfileedt" name='myfileedt' onchange="loadFile(event)" hidden>
                   <i class="fa fa-camera fa-5x"  aria-hidden="true"></i>
               </label>              
             </div>
@@ -108,3 +108,10 @@
     </div>
   </div>
 </div>
+
+<script>
+var loadFile = function(event) {
+	var image = document.getElementById('caminhoedt');
+	image.src = URL.createObjectURL(event.target.files[0]);
+};
+</script>
