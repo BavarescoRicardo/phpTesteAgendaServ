@@ -40,7 +40,7 @@
       // Tratamento de imagem inicio
       $imagedte = $_FILES['myfileedt'];
       move_uploaded_file($imagedte['tmp_name'],"../imagens/".$imagedte['name']);
-      error_log("logs_imagem  ".$imagedte['tmp_name'],"../imagens/".$imagedte['name']);
+      error_log("logs_imagem  ".$imagedte['src']." -- "."../imagens/".$imagedte['name']);
 
       // error_log("myfile:  ".$_FILES['myfile']);
 
@@ -138,6 +138,6 @@ function setaDadosModal(valor) {
     document.getElementById('comissaoprodedt').checked = (obj[valor].comissaoprod == 'S');
 
     document.getElementById('caminhoedt').src = obj[valor].caminho_imagem;
-    document.getElementById('myfileedt').src = obj[valor].caminho_imagem;
+    document.getElementById('myfileedt') = obj[valor].caminho_imagem;
 }
 </script>

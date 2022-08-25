@@ -60,6 +60,14 @@ class funcionario extends Database {
 
         try {
             $stm = $this->connect()->prepare($sqlUpdate);
+            // Ajustando valores nulos check box
+            if($comissaoserv == NULL){
+                $comissaoserv = 'N';
+            }
+
+            if($comissaoprod == NULL){
+                $comissaoprod = 'N';
+            }
             
             $stm->execute([$telefone, $senha, $nome, $caminho, $permissao, $comissaoserv, $comissaoprod, $percentual, $id]);
             
