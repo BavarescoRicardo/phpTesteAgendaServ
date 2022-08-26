@@ -125,7 +125,7 @@
           <div class="row">
             <div class="col-md-3">
             <label for="percentual">% da comissão</label>
-              <input type="text" class="form-control" name="percentual" id="percentual">
+              <input type="number" class="form-control" name="percentual" id="percentual" min="0.00" max="100.00" step="0.05" value="0.00">
             </div>
           </div>
 
