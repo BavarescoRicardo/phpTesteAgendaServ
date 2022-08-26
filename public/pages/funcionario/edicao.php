@@ -30,18 +30,13 @@
 
           <div class="row">
             <div class="col-sm-2">
-              <img src="" class="rounded" name="caminhoedt" id="caminhoedt" style="height: 100px; width: 100px; margin-top: -100px; margin-left: 20px"/>
+              <input type="file" id="myfileedt" name='myfileedt' onchange="loadFile(event)" hidden>
+              <label for="myfileedt">
+                <img src="" class="rounded" name="caminhoedt" id="caminhoedt" style="height: 100px; width: 100px; margin-top: -100px; margin-left: 20px"/>
+              </label>
               <input id="codigoedt" name="imagemantiga" type="hidden">
             </div>
-          </div>
 
-          <div class="row">
-            <div class="col-sm-2">
-              <label class="btn btn-default" style="margin-top: -10px; margin-left: 20px">
-                  <input type="file" id="myfileedt" name='myfileedt' onchange="loadFile(event)" hidden>
-                  <i class="fa fa-camera fa-5x"  aria-hidden="true"></i>
-              </label>              
-            </div>
             <div class="col">
               <div class="form-group">
                 <label for="permissaoedt">Permissao:</label>
