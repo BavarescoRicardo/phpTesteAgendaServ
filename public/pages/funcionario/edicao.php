@@ -11,7 +11,7 @@
         <div id="container-criar" class="container">            
           <form role="form" action="funcionario.php" method="POST" enctype="multipart/form-data">
             <div class="row">
-              <div class="col">
+              <div class="col-sm-2">
                 <input id="codigoedt" name="codigoedt" type="hidden">
               </div>
               <div class="col">
@@ -29,15 +29,15 @@
             </div>
 
           <div class="row">
-            <div class="col">
-            <img src="" class="rounded" name="caminhoedt" id="caminhoedt" style="height: 100px; width: 100px; margin-top: -100px; margin-left: 120px"/>
-            <input id="codigoedt" name="imagemantiga" type="hidden">
+            <div class="col-sm-2">
+              <img src="" class="rounded" name="caminhoedt" id="caminhoedt" style="height: 100px; width: 100px; margin-top: -100px; margin-left: 20px"/>
+              <input id="codigoedt" name="imagemantiga" type="hidden">
             </div>
           </div>
 
           <div class="row">
-            <div class="col">
-              <label class="btn btn-default" style="margin-top: -10px; margin-left: 120px">
+            <div class="col-sm-2">
+              <label class="btn btn-default" style="margin-top: -10px; margin-left: 20px">
                   <input type="file" id="myfileedt" name='myfileedt' onchange="loadFile(event)" hidden>
                   <i class="fa fa-camera fa-5x"  aria-hidden="true"></i>
               </label>              
@@ -52,24 +52,32 @@
               </div>
             </div>
             <div class="col">
-            <div class="card border-dark" style="border: 1px solid;">
-                <div class="card-body">
-                  <h5>Comissão por serviço?</h5>
-                  <label class="radio-inline" style="font-weight: normal;">
-                    <input type="radio" name="comissaoservedt" id="comissaoservedt" value="S">
-                    <label class="form-check-label" for="comissaoservedt">Sim</label>
-                  </label>
-                  <label class="radio-inline" style="font-weight: normal;">
-                    <input type="radio" name="comissaoservedt" id="comissaoservedt" value="N">
-                    <label class="form-check-label" for="comissaoservedt">Não</label>
-                  </label>
+              <div class="card border-dark" style="border: 1px solid;">
+                  <div class="card-body">
+                    <h5>Comissão por serviço?</h5>
+                    <label class="radio-inline" style="font-weight: normal;">
+                      <input type="radio" name="comissaoservedt" id="comissaoservedt" value="S">
+                      <label class="form-check-label" for="comissaoservedt">Sim</label>
+                    </label>
+                    <label class="radio-inline" style="font-weight: normal;">
+                      <input type="radio" name="comissaoservedt" id="comissaoservedt" value="N">
+                      <label class="form-check-label" for="comissaoservedt">Não</label>
+                    </label>
+                  </div>
+                </div> 
+              </div>
+
+              <div class="col-sm-2">
+                <div class="form-group">
+                  <label for="percentualedt">% Commisão:</label>
+                  <input type="number" class="form-control" name="percentualedt" id="percentualedt" min="0.00" max="100.00" step="0.05" value="0.00">
                 </div>
-              </div> 
+              </div>
+
             </div>
-          </div>
 
           <div class="row">
-            <div class="col">
+            <div class="col-sm-2">
 
             </div>
             <div class="col">
@@ -93,14 +101,17 @@
                     </label>
                   </div>
                 </div>
-            </div>
-          </div>
+              </div>
+              <div class="col-sm-2">
+
+              </div>
+            </div>          
 
           <br/>
           <div class="row">
             <div class="col text-center">
-              <input type="button" class="btn btn-danger btn-lg mr-5" data-dismiss="modal" value="Cancelar">
-              <input type="submit" name="editar" class="btn btn-success btn-lg mr-5" value="Salvar">
+              <input type="button" class="btn btn-danger btn-lg mr-5" data-dismiss="modal" value="Cancelar" style="color: black;">
+              <input type="submit" name="editar" class="btn btn-success btn-lg mr-5" value="Salvar" style="color: black;">
             </div>
           </div>          
         </form>

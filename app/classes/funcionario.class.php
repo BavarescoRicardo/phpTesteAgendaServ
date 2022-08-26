@@ -40,7 +40,6 @@ class funcionario extends Database {
         $comissaoserv = 'N';
         $salariofix = 'N';
         $comissaoprod = 'N';
-        $percentual = 0.00;
         
         try {
             $stm = $this->connect()->prepare($sql);            
@@ -53,7 +52,7 @@ class funcionario extends Database {
 
     }
 
-    protected function update($telefone, $senha, $nome, $caminho, $permissao, $comissaoserv, $comissaoprod, $percentual, $id) {
+    protected function update($telefone, $senha, $nome, $caminho, $permissao, $comissaoserv, $comissaoprod, $id) {
        
         $sqlUpdate = "UPDATE funcionario SET `telefone` = ?, `senha` = ?, `nome` = ?, `caminho_imagem` = ?, `permissao` = ?, `comissaoserv` = ?, `comissaoprod` = ?, `percentual` = ? WHERE (`id_funcionario` = ?)";
 

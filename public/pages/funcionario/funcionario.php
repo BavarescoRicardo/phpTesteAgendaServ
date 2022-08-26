@@ -54,9 +54,9 @@
     $senhaedt     = $_POST['senhaedt'];
     $comissaoservedt   = $_POST['comissaoservedt'];
     $comissaoprodedt   = $_POST['comissaoprodedt'];
-    // $percentual     = $_POST['percentualedt'];
-    $percentualedt = 0.00;
-    $objFuncionario->updateFuncionario($telefoneedt, $senhaedt, $nomeedt, $caminhoedt, $permissaoedt, $comissaoservedt, $comissaoprodedt, $percentualedt, $id);
+    
+    
+    $objFuncionario->updateFuncionario($telefoneedt, $senhaedt, $nomeedt, $caminhoedt, $permissaoedt, $comissaoservedt, $comissaoprodedt, $id);
     
    $_SESSION['message'] = "SALVO COM SUCESSO";
    $_SESSION['msg_type'] = "success";
