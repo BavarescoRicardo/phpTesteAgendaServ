@@ -31,6 +31,7 @@
           <div class="row">
             <div class="col">
             <img src="" class="rounded" name="caminhoedt" id="caminhoedt" style="height: 100px; width: 100px; margin-top: -100px; margin-left: 120px"/>
+            <input id="codigoedt" name="imagemantiga" type="hidden">
             </div>
           </div>
 

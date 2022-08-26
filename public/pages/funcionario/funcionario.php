@@ -12,8 +12,6 @@
         $image=$_FILES['myfile'];
         move_uploaded_file($image['tmp_name'],"../imagens/".$image['name']);
 
-        error_log("myfile:  ".$_FILES['myfile']);
-
         // $caminho = "../imagens/".$image['name'];
         $caminho = "../imagens/".$image['name'];
       // Tratamento de imagem fim
@@ -38,14 +36,15 @@
   if(isset($_POST["editar"])) {
 
       // Tratamento de imagem inicio
-      $imagedte = $_FILES['myfileedt'];
-      move_uploaded_file($imagedte['tmp_name'],"../imagens/".$imagedte['name']);
-      error_log("logs_imagem  ".$imagedte['src']." -- "."../imagens/".$imagedte['name']);
-
-      // error_log("myfile:  ".$_FILES['myfile']);
-
-      // $caminho = "../imagens/".$image['name'];
-      $caminhoedt = "../imagens/".$imagedte['name'];
+      $imagedte = $_FILES['myfileedt'];      
+      
+      if (($imagedte == null) || (empty($imagedte['name']))){
+        $caminhoedt = $_POST['imagemantiga'];
+      } else {
+        move_uploaded_file($imagedte['tmp_name'],"../imagens/".$imagedte['name']);
+        $caminhoedt = "../imagens/".$imagedte['name'];        
+      }
+      
     // Tratamento de imagem fim
         
     $id    = $_POST['codigoedt'];
@@ -127,8 +126,8 @@
 function setaDadosModal(valor) {
     var obj = <?php echo json_encode($funcionarios); ?>;
     
-    // console.log(obj);
-    //document.location.reload(true);
+    console.log(obj);
+    // document.location.reload(true);
     document.getElementById('codigoedt').value = obj[valor].id_funcionario;
     document.getElementById('nomeedt').value = obj[valor].nome;
     document.getElementById('senhaedt').value = obj[valor].senha;
@@ -138,6 +137,6 @@ function setaDadosModal(valor) {
     document.getElementById('comissaoprodedt').checked = (obj[valor].comissaoprod == 'S');
 
     document.getElementById('caminhoedt').src = obj[valor].caminho_imagem;
-    document.getElementById('myfileedt') = obj[valor].caminho_imagem;
+    document.getElementById('imagemantiga').value = obj[valor].caminho_imagem;
 }
 </script>

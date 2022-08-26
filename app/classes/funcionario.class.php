@@ -43,8 +43,7 @@ class funcionario extends Database {
         $percentual = 0.00;
         
         try {
-            $stm = $this->connect()->prepare($sql);
-            
+            $stm = $this->connect()->prepare($sql);            
             $stm->execute([$nome, $permissao, $telefone,  $senha, $comissaoserv, $salariofix, $comissaoprod, $percentual, $caminho]);
             
         } catch (PDOException $e) {
@@ -60,6 +59,7 @@ class funcionario extends Database {
 
         try {
             $stm = $this->connect()->prepare($sqlUpdate);
+
             // Ajustando valores nulos check box
             if($comissaoserv == NULL){
                 $comissaoserv = 'N';
