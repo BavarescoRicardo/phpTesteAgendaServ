@@ -65,7 +65,7 @@ class funcionario extends Database {
         }
     }
 
-    protected function update($telefone, $senha, $nome, $caminho, $permissao, $comissaoserv, $comissaoprod, $id) {
+    protected function update($telefone, $senha, $nome, $caminho, $permissao, $comissaoserv, $comissaoprod, $percentualedt, $id) {
        
         $sqlUpdate = "UPDATE funcionario SET `telefone` = ?, `senha` = ?, `nome` = ?, `caminho_imagem` = ?, `permissao` = ?, `comissaoserv` = ?, `comissaoprod` = ?, `percentual` = ? WHERE (`id_funcionario` = ?)";
 
@@ -81,7 +81,7 @@ class funcionario extends Database {
                 $comissaoprod = 'N';
             }
             
-            $stm->execute([$telefone, $senha, $nome, $caminho, $permissao, $comissaoserv, $comissaoprod, $percentual, $id]);
+            $stm->execute([$telefone, $senha, $nome, $caminho, $permissao, $comissaoserv, $comissaoprod, $percentualedt, $id]);
             
         } catch (PDOException $e) {
             echo "Error: ".$e->getMessage();

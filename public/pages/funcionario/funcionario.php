@@ -61,9 +61,9 @@
     $senhaedt     = $_POST['senhaedt'];
     $comissaoservedt   = $_POST['comissaoservedt'];
     $comissaoprodedt   = $_POST['comissaoprodedt'];
+    $percentualedt     = $_POST['percentualedt'];
     
-    
-    $objFuncionario->updateFuncionario($telefoneedt, $senhaedt, $nomeedt, $caminhoedt, $permissaoedt, $comissaoservedt, $comissaoprodedt, $id);
+    $objFuncionario->updateFuncionario($telefoneedt, $senhaedt, $nomeedt, $caminhoedt, $permissaoedt, $comissaoservedt, $comissaoprodedt, $percentualedt, $id);
     
    $_SESSION['message'] = "SALVO COM SUCESSO";
    $_SESSION['msg_type'] = "success";
@@ -142,6 +142,7 @@ function setaDadosModal(valor) {
     document.getElementById('permissaoedt').value = obj[valor].permissao;
     document.getElementById('comissaoservedt').checked = (obj[valor].comissaoserv == 'S');
     document.getElementById('comissaoprodedt').checked = (obj[valor].comissaoprod == 'S');
+    document.getElementById('percentualedt').value = obj[valor].percentual;
 
     document.getElementById('caminhoedt').src = obj[valor].caminho_imagem;
     document.getElementById('imagemantiga').value = obj[valor].caminho_imagem;
