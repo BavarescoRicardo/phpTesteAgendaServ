@@ -55,7 +55,7 @@ class funcionario extends Database {
     protected function delete($id) {
         
         $sql = "UPDATE funcionario SET status = 0 WHERE id_funcionario = ?";
-        
+        error_log("Excluido funcionario:  ".$id);
         try{
             $stm = $this->connect()->prepare($sql);
             $stm->execute([$id]);
@@ -85,6 +85,7 @@ class funcionario extends Database {
             
         } catch (PDOException $e) {
             echo "Error: ".$e->getMessage();
+            error_log("Erro ao atualizar:  ".$e->getMessage());
             $this->connect()->rollback();
         }
 
