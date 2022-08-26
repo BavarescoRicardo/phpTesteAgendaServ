@@ -52,6 +52,19 @@ class funcionario extends Database {
 
     }
 
+    protected function delete($id) {
+        
+        $sql = "UPDATE funcionario SET status = 0 WHERE id_funcionario = ?";
+        
+        try{
+            $stm = $this->connect()->prepare($sql);
+            $stm->execute([$id]);
+        } catch (PDOException $e) {
+            echo "Error: ".$e->getMessage();
+            $this->connect()->rollback();
+        }
+    }
+
     protected function update($telefone, $senha, $nome, $caminho, $permissao, $comissaoserv, $comissaoprod, $id) {
        
         $sqlUpdate = "UPDATE funcionario SET `telefone` = ?, `senha` = ?, `nome` = ?, `caminho_imagem` = ?, `permissao` = ?, `comissaoserv` = ?, `comissaoprod` = ?, `percentual` = ? WHERE (`id_funcionario` = ?)";

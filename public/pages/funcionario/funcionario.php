@@ -6,6 +6,13 @@
     $images = glob("../imagens/*");
     $indice = 0;
 
+    if(isset($_POST["deletar"])) {       
+
+      $id = $_POST['codigoedt'];;
+      $objFuncionario->deleteFuncionario($id);  
+      $funcionarios = $objFuncionario->getFuncionarios();
+  }
+
     if(isset($_POST["salvar"])) {
 
       // Tratamento de imagem inicio

@@ -20,11 +20,16 @@
                     <input type="text" class="form-control" id="nomeedt" name="nomeedt">
                 </div>
               </div>
-              <div class="col">
+              <div class="col-sm-2">
                 <div class="form-group">
                   <label for="telefoneedt">telefone/login:</label>
                   <input type="text" class="form-control" id="telefoneedt" name="telefoneedt">
                 </div>
+              </div>
+              <div class="col-sm-2">
+                <label class="btn btn-default rounded-circle" style="margin-left: 50px">
+                  <button type="submit" class="btn" name="deletar"><i class="fa fa-trash fa-4x fa-circle" aria-hidden="true"></i></button>
+                </label>              
               </div>
             </div>
 

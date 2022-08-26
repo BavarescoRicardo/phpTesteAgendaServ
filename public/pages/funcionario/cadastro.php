@@ -46,16 +46,10 @@
 
           <div class="row">
             <div class="col">
-              <img src="" class="rounded" name="imagefunc" id="imagefunc" style="visibility: hidden; height: 100px; width: 105px; margin-top: -105px; margin-left: 120px"/>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col">
-              <label class="btn btn-default" style="margin-top: -20px; margin-left: 120px">
-                  <input type="file" id="myfile" name='myfile' onchange="loadFileCad(event)" hidden>
-                  <i class="fa fa-camera fa-5x"  aria-hidden="true"></i>
-              </label>              
+              <label for="myfile">
+                  <img src="../imagens/iconecamera.jpg" class="rounded" name="imagefunc" id="imagefunc" style="height: 100px; width: 105px; margin-top: -55px; margin-left: 120px"/>
+              </label>
+              <input type="file" id="myfile" name='myfile' onchange="loadFileCad(event)" hidden>
             </div>
             <div class="col">
               <div class="form-group">
@@ -149,7 +143,6 @@
 <script>
 var loadFileCad = function(event) {
 	var image = document.getElementById('imagefunc');
-  document.getElementById('imagefunc').style.visibility = 'visible';
 	image.src = URL.createObjectURL(event.target.files[0]);
 };
 </script>

@@ -9,6 +9,10 @@ class funcionarioview extends funcionario {
     public function getFuncionarioUnico($id) {
         return $this->getFuncionario($id);
     }
+    
+    public function deleteFuncionario($id) {
+        $this->delete($id);
+    }
 
     public function updateFuncionario($telefone, $senha, $nome, $caminho, $permissao, $comissaoserv, $comissaoprod, $id) {
         return $this->update($telefone, $senha, $nome, $caminho, $permissao, $comissaoserv, $comissaoprod, $id);
