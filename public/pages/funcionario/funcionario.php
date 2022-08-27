@@ -31,6 +31,10 @@
       $salariofix     = $_POST['salariofixo'];
       $comissaoprod   = $_POST['comissaoprod'];
       $percentual     = $_POST['percentual'];
+      
+      // fomatacao para salvar no banco
+      $percentual = number_format($percentual,2,",",".");
+
       $objFuncionario->insertFuncionario($nome, $permissao, $telefone,  $senha, $comissaoserv, $salariofix, $comissaoprod, $percentual, $caminho);
       
      $_SESSION['message'] = "SALVO COM SUCESSO";
@@ -62,6 +66,9 @@
     $comissaoservedt   = $_POST['comissaoservedt'];
     $comissaoprodedt   = $_POST['comissaoprodedt'];
     $percentualedt     = $_POST['percentualedt'];
+          
+    // fomatacao para salvar no banco
+    $percentualedt = number_format($percentualedt,2,",",".");
     
     $objFuncionario->updateFuncionario($telefoneedt, $senhaedt, $nomeedt, $caminhoedt, $permissaoedt, $comissaoservedt, $comissaoprodedt, $percentualedt, $id);
     
